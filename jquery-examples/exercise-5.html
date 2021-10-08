@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery Example -- Using each method</title>
+</head>
+<body>
+<ul>
+    <li>item-1</li>
+    <li>item-2</li>
+    <li>item-3</li>
+    <li>item-4</li>
+    <li>item-5</li>
+</ul>
+
+<button>Click me and see the console!</button>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script>
+
+    $('button').click(readValues);
+
+    function readValues() {
+        $('li').each(function (myIndex, myElement) {
+            const text = $(myElement).text();
+            console.log(myIndex + '. ' + text)
+        });
+    }
+
+</script>
+
+</body>
+</html>

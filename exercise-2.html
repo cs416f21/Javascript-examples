@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Example -- SetInterval</title>
+</head>
+<body>
+
+<script>
+    let counter = 0;
+    const timer = setInterval(hello, 500);  // Call hello function every 500 milliseconds
+    const timer2 = setInterval(goodbye, 1000); // Call goodbye function every 1000 milliseconds
+
+    function hello() {
+        console.log(`Hello-${++counter}`);
+
+        // Stop the timer after 10th iteration
+        if (counter === 10){
+            clearInterval(timer);
+        }
+    }
+
+    function goodbye() {
+        console.log("Goodbye");
+        // Stop the timer if counter = 10
+        if (counter === 10){
+            clearInterval(timer2);
+        }
+    }
+
+</script>
+</body>
+</html>

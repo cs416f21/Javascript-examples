@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Example -- Change styles</title>
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+<button>Change Styles</button>
+
+<script>
+    // 1. Add an eventlistener for the button to detect it is clicked or not
+    // 2. Write a function that is called whenever the button is clicked and changes the styles of p tag
+
+    // 1
+    document.querySelector('button').addEventListener("click", changeStyles);
+
+    // 2
+    function changeStyles() {
+        document.querySelector('p').style.color = "red";
+        document.querySelector('p').style.fontSize = "3rem";
+    }
+
+</script>
+</body>
+</html>

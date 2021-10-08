@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery Example -- Change Image v1</title>
+</head>
+<body>
+<div>
+    <img src="https://placekitten.com/640/360" alt="animal image" width="300px">
+</div>
+
+<button>Change Image</button>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script>
+
+    let isCat = true;   // a boolean varible to keep track whether the current image is catImage
+    const catImage = "https://placekitten.com/640/360";
+    const bearImage = "https://placebear.com/640/360";
+
+    $('button').click(function () {
+        if (isCat){
+            $('img').attr("src", bearImage);
+            isCat = false;
+        }
+        else {
+            $('img').attr("src", catImage);
+            isCat = true;
+        }
+    });
+
+
+</script>
+</body>
+</html>

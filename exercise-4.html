@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Example -- Moving box</title>
+    <style>
+        #my-box {
+            background-color: lightgray;
+            border: 3px solid red;
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+<button id="start-button">Start</button>
+<button id="stop-button">Stop</button>
+<div id="my-box"></div>
+
+<script>
+
+    document.querySelector('#start-button').addEventListener("click", start);
+    document.querySelector('#stop-button').addEventListener("click", stop);
+
+    let timer;
+    let left = 0;
+    const box = document.querySelector('#my-box');
+
+    // Start moving the box by setting an interval (100 milliseconds)
+    function start() {
+        timer = setInterval(function () {
+            left += 5;
+            box.style.left = left + 'px';
+        }, 100);
+    }
+
+    // Stop moving the box by clearing the interval
+    function stop() {
+        clearInterval(timer);
+    }
+
+</script>
+
+</body>
+</html>
